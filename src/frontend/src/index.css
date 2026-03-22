@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Light mode: warm off-white */
+    --background: 0.97 0.01 80;
+    --foreground: 0.13 0.01 50;
+    --card: 1 0 0;
+    --card-foreground: 0.13 0.01 50;
+    --popover: 1 0 0;
+    --popover-foreground: 0.13 0.01 50;
+    --primary: 0.68 0.15 85;
+    --primary-foreground: 0.13 0.01 50;
+    --secondary: 0.93 0.01 80;
+    --secondary-foreground: 0.13 0.01 50;
+    --muted: 0.93 0.01 80;
+    --muted-foreground: 0.5 0.01 50;
+    --accent: 0.68 0.15 85;
+    --accent-foreground: 0.13 0.01 50;
+    --destructive: 0.58 0.24 27;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.88 0.01 80;
+    --input: 0.88 0.01 80;
+    --ring: 0.68 0.15 85;
+    --chart-1: 0.68 0.15 85;
+    --chart-2: 0.73 0.12 185;
+    --chart-3: 0.6 0.16 300;
+    --chart-4: 0.7 0.15 60;
+    --chart-5: 0.55 0.18 240;
+    --sidebar: 0.97 0.01 80;
+    --sidebar-foreground: 0.13 0.01 50;
+    --sidebar-primary: 0.68 0.15 85;
+    --sidebar-primary-foreground: 0.13 0.01 50;
+    --sidebar-accent: 0.93 0.01 80;
+    --sidebar-accent-foreground: 0.13 0.01 50;
+    --sidebar-border: 0.88 0.01 80;
+    --sidebar-ring: 0.68 0.15 85;
+  }
+
+  .dark {
+    --background: 0.12 0 0;
+    --foreground: 0.95 0 0;
+    --card: 0.15 0 0;
+    --card-foreground: 0.95 0 0;
+    --popover: 0.15 0 0;
+    --popover-foreground: 0.95 0 0;
+    --primary: 0.68 0.15 85;
+    --primary-foreground: 0.12 0 0;
+    --secondary: 0.2 0 0;
+    --secondary-foreground: 0.95 0 0;
+    --muted: 0.2 0 0;
+    --muted-foreground: 0.6 0 0;
+    --accent: 0.68 0.15 85;
+    --accent-foreground: 0.12 0 0;
+    --destructive: 0.58 0.24 27;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.22 0 0;
+    --input: 0.22 0 0;
+    --ring: 0.68 0.15 85;
+    --chart-1: 0.68 0.15 85;
+    --chart-2: 0.73 0.12 185;
+    --chart-3: 0.6 0.16 300;
+    --chart-4: 0.7 0.15 60;
+    --chart-5: 0.55 0.18 240;
+    --sidebar: 0.12 0 0;
+    --sidebar-foreground: 0.95 0 0;
+    --sidebar-primary: 0.68 0.15 85;
+    --sidebar-primary-foreground: 0.12 0 0;
+    --sidebar-accent: 0.2 0 0;
+    --sidebar-accent-foreground: 0.95 0 0;
+    --sidebar-border: 0.22 0 0;
+    --sidebar-ring: 0.68 0.15 85;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: #c8a000;
+  }
+
+  .bg-gold {
+    background-color: #c8a000;
+  }
+
+  .border-gold {
+    border-color: #c8a000;
+  }
+
+  .text-coral {
+    color: #ff6b6b;
+  }
+
+  .text-teal {
+    color: #4ecdc4;
+  }
+
+  .bg-coral {
+    background-color: #ff6b6b;
+  }
+
+  .bg-teal {
+    background-color: #4ecdc4;
+  }
+
+  .border-coral {
+    border-color: #ff6b6b;
+  }
+
+  .border-teal {
+    border-color: #4ecdc4;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      #3d1505 0%,
+      #7a2a0e 20%,
+      #4a1a5e 60%,
+      #1a0d2e 80%,
+      #0e0b14 100%
+    );
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px #c8a000, 0 0 20px #c8a00080;
+  }
+  50% {
+    box-shadow: 0 0 16px #c8a000, 0 0 40px #c8a000aa;
+  }
+}
+
+@keyframes scroll-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.4;
+  }
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+}
+
+.float-anim {
+  animation: float 3s ease-in-out infinite;
+}
+
+.glow-gold {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.scroll-bounce {
+  animation: scroll-bounce 1.5s ease-in-out infinite;
+}
