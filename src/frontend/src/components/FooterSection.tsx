@@ -1,5 +1,5 @@
-import { Heart } from "lucide-react";
-import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
+import { Heart, Linkedin } from "lucide-react";
+import { SiGithub, SiInstagram } from "react-icons/si";
 
 export function FooterSection() {
   const year = new Date().getFullYear();
@@ -66,7 +66,7 @@ export function FooterSection() {
               className="w-9 h-9 rounded-full bg-white/10 hover:bg-gold/20 flex items-center justify-center transition-colors group"
               data-ocid="footer.linkedin.link"
             >
-              <SiLinkedin
+              <Linkedin
                 size={16}
                 className="text-white/50 group-hover:text-gold transition-colors"
               />
